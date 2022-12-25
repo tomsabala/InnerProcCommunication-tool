@@ -21,7 +21,7 @@ In "char_dev_name" place your Char-Dev wanted name
 
 In [minor_number] insert a minoer number between 0 and 255 included.
 
-`sudo chmod o+rw /dev/"char_dev_name"
+`sudo chmod o+rw /dev/"char_dev_name"`
 
 ### Compile Reader and Sender
 

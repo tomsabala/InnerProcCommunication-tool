@@ -25,9 +25,9 @@ In [minor_number] insert a minoer number between 0 and 255 included.
 
 ### Compile Reader and Sender
 
-gcc -O3 -Wall -std=c11 message_sender.c -o send.o
+`gcc -O3 -Wall -std=c11 message_sender.c -o send.o`
 
-gcc -O3 -Wall -std=c11 message_reader.c -o read.o
+`gcc -O3 -Wall -std=c11 message_reader.c -o read.o`
 
 
 ### Write and read messages
@@ -36,7 +36,7 @@ The message_sender.c file needs to get the char_dev filepath, the channel id, an
 
 For example:
 
-./send.o "/dev/my_chardev" 1 "Hello World!!"
+`./send.o "/dev/my_chardev" 1 "Hello World!!"`
 
 writes the message "Hello World!!" to channel 1 in my_chardev
 
@@ -44,7 +44,7 @@ The message_reader.c file needs to get the char_dev filepath, and the channel id
 
 For example:
 
-./read.o "/dev/my_chardev" 1
+`./read.o "/dev/my_chardev" 1`
 
 reads the message "Hello World!!" from channel 1 in my_chardev
 

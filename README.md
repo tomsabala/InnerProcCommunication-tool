@@ -11,16 +11,22 @@ and it is allowing processes to communicate by reading and sending messages thro
 The communication mechanism is basicly a new Device Driver that we need to load to our kernel.
 So inorder to load our new module type:
 `make` <br />
+
 `sudo insmod message_slot.ko` <br />
 
 ### Creating a new CharDev
 `sudo mknod /dev/"char_dev_name" c 235 [minor_number]`
+
 In "char_dev_name" place your Char-Dev wanted name
+
 In [minor_number] insert a minoer number between 0 and 255 included.
+
 `sudo chmod o+rw /dev/"char_dev_name"
 
 ### Compile Reader and Sender
+
 gcc -O3 -Wall -std=c11 message_sender.c -o send.o
+
 gcc -O3 -Wall -std=c11 message_reader.c -o read.o
 
 

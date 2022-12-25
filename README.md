@@ -31,17 +31,21 @@ gcc -O3 -Wall -std=c11 message_reader.c -o read.o
 
 
 ### Write and read messages
-Using the send/read.0 files you can now read and send messages between inter processes.
+Using the send/read.o files you can now read and send messages between inter processes.
 The message_sender.c file needs to get the char_dev filepath, the channel id, and the message itself
 
 For example:
+
 ./send.o "/dev/my_chardev" 1 "Hello World!!"
+
 writes the message "Hello World!!" to channel 1 in my_chardev
 
 The message_reader.c file needs to get the char_dev filepath, and the channel id
 
 For example:
+
 ./read.o "/dev/my_chardev" 1
+
 reads the message "Hello World!!" from channel 1 in my_chardev
 
 
